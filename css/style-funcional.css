@@ -1,6 +1,5 @@
 *{
     list-style-type: none;
-    border: 0px;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
@@ -13,47 +12,112 @@ img{
 h1,h2, h4,p{
     font-family: Arial, Helvetica, sans-serif;
 }
-@media screen and (max-width:370px) {
 
-    header{
+.container{
+    display: grid;
+    justify-content: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.logo{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.logo img{
+    width: 15%;
+}
+.titulo{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.titulo h1{
+    text-align: center;
+    font-size: calc(0.7em + 0.5vw);
+}
+.divisoria{
+    align-items: end;
+    height: 2px;
+    background-color: rgb(111, 111, 111);
+}
+.foto{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-image: url(/img/background1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.foto img{
+    width: 40%;
+}
+.sub-titulo{
+    margin: 5px 0px 5px 0px;
+}
+.sub-titulo h2{
+    background-color: rgba(184, 241, 60, 0.5);
+    text-align: center;
+    padding: 15px;
+    font-size: calc(0.7em + 0.5vw);
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "i i"
+                         "t t";
+    justify-content: center;
+    grid-gap: 10px;
+}
+.conteudo1{
+    background-color: rgb(158, 158, 158);
+    padding: 10px;
+    grid-area: i;
+
+}
+.info-inicial{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: solid 1px;
+    border-color: rgb(255, 255, 255);
+}
+.info-inicial div{
+    margin-left: 20%;
+}
+@media screen and (max-width:580px){
+    .info-inicial{
         display: flex;
         flex-direction: column;
-        height: 320px;
-        text-align: center;
-
+        border: solid 1px;
+        border-color: rgb(255, 255, 255);
     }
-    .foto{
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        height: 200px;
-    }
-    .foto img{
-        padding: 5px;
-    }
-    .titulo-funcional{
-        margin-top: 20px;
-        text-align: center;
-    }
-    h1{
-        font-size: 14px;
-        font-weight: bold;
-    }
-    h2{
-        margin-top: 10px;
-        font-size: 16px;
-    }
-    main{
-        background-color: #b5b5b5;
-    }
-    .conteudo1{
-      padding: 20px;
-    }
-    .conteudo1 div{
-        padding: 5px;
-    }
-    .assi-diretor{
-        display: flex;
-        justify-content: center;
-    }
+}
+.info-inicial div{
+    padding: 5px;
+}
+.conteudo2{
+    padding: 5px;
+    background-color: rgb(158, 158, 158);
+    grid-area: t;
+}
+.assi-diretor{
+    border: solid 1px;
+    border-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-size: calc(0.7em + 0.5vw);
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: calc(0.9em + 0.9vw);
 }
