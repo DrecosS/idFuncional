@@ -27,12 +27,11 @@ header{
 .box{
     display: grid;
     justify-items: center; 
-
-
 }
 
 label{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(0.5em + 0.5vw);
 }
 .btmatricula{
     align-self: center;

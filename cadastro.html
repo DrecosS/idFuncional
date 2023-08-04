@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form class="form" enctype="multipart/form-data" action="" method="post">
+        
+            <div class="foto">
+                <label for="foto">Imagem: </label>
+                <input name="foto" type="file">
+            </div>
+        <div class="conteudo">
+            <div class="nome">
+                <label for="nome">Nome:</label><br>
+                <input name="nome" type="text">
+            </div>
+            <div class="matricula">
+                <label for="matricula">Matrícula: </label><br>
+                <input type="number" maxlength="7">
+            </div>
+            <div class="dtnascimento">
+                <label for="dtaNascimento">Nascimento: </label><br>
+                <input name="dtaNascimento" type="date">
+            </div>
+            <div class="filiacao">
+                <label for="mae">Mãe: </label><br>
+                <input name="mae" type="text" id="mae"><br>
+                <label for="pai">Pai: </label><br>
+                <input name="pai" type="text" id="pai">
+            </div>
+            <div class="naturalidade">
+                <label for="naturalidade">Naturalidade: </label><br>
+                <input name="naturalidade" type="text">
+            </div>
+            <div class="validade">
+                <label for="dtvalidade">Data de Validade: </label><br>
+                <input type="date" id="dtvalidade">
+            </div>
+            <div class="expedida">
+                <label for="dtexpedida">Data de Expedição: </label><br>
+                <input name="expedida" type="date" id="dtexpedida">
+            </div>
+            <div class="tpoSanguineo">
+                <label for="tpoSang">Tipo Sanguíneo: </label><br>
+                <input name="tpoSang" type="text" maxlength="2">
+            </div>
+            <div class="btn_salvar">
+                <input type="submit" value="Salvar">
+            </div>
+                 <input type="hidden" name="MAX_FILE_SIZE" value="9999999">
+            
+    </div>
+    </form>
+    </div>
+</body>
+</html>

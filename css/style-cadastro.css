@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration-style: none;
+}
+label{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+form{
+    margin-top: 20px;
+    background-color: rgb(156, 156, 156);
+    border: solid 2px;
+    border-radius: 22px;
+}
+.form div{
+    padding: 10px;
+}
+.form input{
+    height: 25px;
+    width: 300px;
+}
+.conteudo{
+    display: grid;
+    justify-content: center;
+}
+.matricula input{width: 150px;}
+.dtnascimento input{width: 150px;}
+.validade input{width: 150px;}
+.expedida input{width: 150px;}
+.btn_salvar{
+    display: flex;
+    justify-content: center;
+}
+.btn_salvar input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    height: 50px;
+    width: 100px;
+}
