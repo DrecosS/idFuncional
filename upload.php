@@ -1,6 +1,6 @@
 <?php
     require("config.php");
-    $foto = $_POST['foto'];
+    $foto = $_FILES['foto'];
     $nome = $_POST['nome'];
     $matricula = $_POST['matricula'];
     $mae = $_POST['mae'];
@@ -9,6 +9,9 @@
     $dt_validade = $_POST['validade'];
     $dt_expedida = $_POST['expedida'];
     $tpoSanguineo = $_POST['tpoSang'];
+    $nome_foto = $_FILES['nome_foto'];
+    $tamanho_foto = $_FILES['tamanho_foto'];
+    $tipo_foto = $_FILES['tipo_foto'];
 
     if ($foto != "none")
     {
@@ -18,8 +21,8 @@
         fclose($fp);
 
         $queryInsercao = "INSERT INTO tb_agentes (foto, nome, matricula, mae, pai, naturalidade,
-        dt_validade, dt_expedida, tpoSanguineo) VALUES ($foto, $nome,$matricula,
-        $mae, $pai, $naturalidade, $dt_validade, $dt_expedida, $tpoSanguineo)";
+        dt_validade, dt_expedida, tpoSanguineo, nome_foto, tamanho_foto, tipo_foto) VALUES ($foto, $nome,$matricula,
+        $mae, $pai, $naturalidade, $dt_validade, $dt_expedida, $tpoSanguineo, $nome_foto, $tamanho_foto, $tipo_foto)";
 
         mysqli_query($queryInsercao) or die ("Algo deu errado ao inserir o registro. 
         Tente novamente");

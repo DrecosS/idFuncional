@@ -1,3 +1,28 @@
+<?php
+    if(isset($_POST['submit']));
+    {
+        // print_r($_POST['nome']);
+        // print_r($_POST['matricula']);
+        // print_r($_POST['dtNascimento']);
+ 
+        include_once('config.php');
+
+        $foto = $_POST['foto'];
+        $nome = $_POST['nome'];
+        $matricula = $_POST['matricula'];
+        $dtnacimento = $_POST['dtnascimento'];
+        $mae = $_POST['mae'];
+        $pai = $_POST['pai'];
+        $naturalidade = $_POST['naturilidade'];
+        $dtvalidade = $_POST['dtvalidade'];
+        $dtexpedida = $_POST['dtexpedida'];
+        $tpoSang = $_POST['tpoSang'];
+
+        $result = mysqli_query($conexao);
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-    <form class="form" enctype="multipart/form-data" action="" method="post">
+    <form class="form" action="cadastro.php" method="post">
         
             <div class="foto">
                 <label for="foto">Imagem: </label>
@@ -17,15 +42,15 @@
         <div class="conteudo">
             <div class="nome">
                 <label for="nome">Nome:</label><br>
-                <input name="nome" type="text">
+                <input name="nome" type="text" id="nome">
             </div>
             <div class="matricula">
                 <label for="matricula">Matrícula: </label><br>
-                <input type="number" maxlength="7">
+                <input name="matricula" type="number" maxlength="7" id="matricula">
             </div>
             <div class="dtnascimento">
-                <label for="dtaNascimento">Nascimento: </label><br>
-                <input name="dtaNascimento" type="date">
+                <label for="dtNascimento">Nascimento: </label><br>
+                <input name="dtNascimento" type="date" id="dtNascimento">
             </div>
             <div class="filiacao">
                 <label for="mae">Mãe: </label><br>
@@ -39,20 +64,20 @@
             </div>
             <div class="validade">
                 <label for="dtvalidade">Data de Validade: </label><br>
-                <input type="date" id="dtvalidade">
+                <input name="dtvalidade" type="date" id="dtvalidade">
             </div>
             <div class="expedida">
                 <label for="dtexpedida">Data de Expedição: </label><br>
-                <input name="expedida" type="date" id="dtexpedida">
+                <input name="dtexpedida" type="date" id="dtexpedida">
             </div>
             <div class="tpoSanguineo">
                 <label for="tpoSang">Tipo Sanguíneo: </label><br>
-                <input name="tpoSang" type="text" maxlength="2">
+                <input name="tpoSang" id="tpoSang" type="text" maxlength="2">
             </div>
             <div class="btn_salvar">
-                <input type="submit" value="Salvar">
+                <input name="submit" type="submit" value="Salvar">
             </div>
-                 <input type="hidden" name="MAX_FILE_SIZE" value="9999999">
+                 
             
     </div>
     </form>
