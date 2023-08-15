@@ -10,18 +10,17 @@
 <body>
     <div class="container">
         <header>
+            <form action="funcional.php" name="pesquisa" method="post">
             <div class="logo">
                 <img src="img/Teste logo2.png" alt="">
             </div>
             <div class="box">
                 <label for=""><b>Insira o número da matrícula do Agente:</b></label><br>
-                <input class="btmatricula" type="text"><br>
-                <input class="btenviar" type="submit" value="Consultar">
+                <input class="btmatricula" type="text" name="matricula" onkeydown="if(this.value.lengh==7) return false;"><br>
+                <input class="btn-consulta" id="btn-consulta" type="submit" value="Consultar">
             </div>
+            </form>
         </header>
-        <main>
-            
-        </main>
     </div>
 </body>
 </html>

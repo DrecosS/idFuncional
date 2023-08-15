@@ -1,28 +1,3 @@
-<?php
-    if(isset($_POST['submit']));
-    {
-        // print_r($_POST['nome']);
-        // print_r($_POST['matricula']);
-        // print_r($_POST['dtNascimento']);
- 
-        include_once('config.php');
-
-        $foto = $_POST['foto'];
-        $nome = $_POST['nome'];
-        $matricula = $_POST['matricula'];
-        $dtnacimento = $_POST['dtnascimento'];
-        $mae = $_POST['mae'];
-        $pai = $_POST['pai'];
-        $naturalidade = $_POST['naturilidade'];
-        $dtvalidade = $_POST['dtvalidade'];
-        $dtexpedida = $_POST['dtexpedida'];
-        $tpoSang = $_POST['tpoSang'];
-
-        $result = mysqli_query($conexao);
-
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +8,10 @@
 </head>
 <body>
     <div class="container">
-    <form class="form" action="cadastro.php" method="post">
-        
+    <form class="form" action="enviar.php" method="POST">
             <div class="foto">
                 <label for="foto">Imagem: </label>
-                <input name="foto" type="file">
+                <input name="fotoagente" type="file">
             </div>
         <div class="conteudo">
             <div class="nome">
@@ -75,10 +49,8 @@
                 <input name="tpoSang" id="tpoSang" type="text" maxlength="2">
             </div>
             <div class="btn_salvar">
-                <input name="submit" type="submit" value="Salvar">
-            </div>
-                 
-            
+                <input name="submit" type="submit" value="Salvar" id="submit">
+            </div>      
     </div>
     </form>
     </div>

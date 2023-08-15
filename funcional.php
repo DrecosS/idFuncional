@@ -1,3 +1,25 @@
+<?php
+
+include_once("config.php");
+
+$pesquisa = isset($_POST['matricula']) ? $_POST['matricula'] : "";
+
+
+$sql = "SELECT * FROM tb_agentes WHERE matricula ='$pesquisa'";
+$resultado = $conexao->query($sql);
+
+while ($registro = mysqli_fetch_assoc($resultado))
+{
+   
+    $nome = $registro['nome'];
+    echo ".$nome.";
+    
+}
+mysqli_close($conexao);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +42,7 @@
             </div>
             <div class="divisoria"></div>
             <div class="foto">
-                <img src="img/Sena.png" alt="">
+                <img src="" alt="" id="fotoagente">
             </div>
             <div class="sub-titulo">
                 <h2>IDENTIDADE FUNCIONAL</h2>
@@ -31,35 +53,36 @@
                 <div class="info-inicial">
                         <div class="Nome">
                             <h4>Nome:</h4>
-                            <p>Tiago de Santos de Sena</p>
+                            <p name="nome"><php echo $nome; ?></p>
                         </div>
                         <div class="matricula">
                             <h4>Matrícula:</h4>
-                            <p>2107508</p>
+                            <p id="matricula"></p>
                         </div>
                         <div class="dtaNascimento">
                             <h4>Data de Nascimento:</h4>
-                            <p>14/03/1984</p>
+                            <p id="dtnascimento"></p>
                         </div>
                         <div class="filiacao">
                             <h4>Filiação:</h4>
-                            <p>Maria de Fátima de Souza Santos</p>
+                            <p id="mae"></p>
+                            <p id="pai"></p>
                         </div>
                         <div class="naturalidade">
                             <h4>Naturalidade:</h4>
-                            <p>João Pessoa</p>
+                            <p id="naturalidade"></p>
                         </div>
                         <div class="validade">
                             <h4>Validade:</h4>
-                            <p>01/07/2028</p>
+                            <p id="validade"></p>
                         </div>
                         <div class="tpoSanguineo">
                             <h4>Tipo Sanguíneo:</h4>
-                            <p>A+</p>
+                            <p id="tpoSang"></p>
                         </div>
                         <div class="expedida">
                             <h4>Expedida em:</h4>
-                            <p>01/07/2023</p>
+                            <p id="dtexpedida"></p>
                         </div>
                         <div class="bayeux">
                             <h4>Informações:</h4>
